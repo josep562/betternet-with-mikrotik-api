@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\AddComment;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\BillingDownload;
@@ -24,7 +23,6 @@ use App\Http\Controllers\UserDownload;
 use App\Http\Controllers\UserEnable;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 
 Route::middleware('auth')->group(function () {
     Route::get('/', DashboardController::class)->name('dashboard');
